@@ -13,6 +13,38 @@
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css"/>
     </noscript>
+    <style>
+        /* Add this style for the copy functionality */
+        .copy-phone {
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+        }
+        .copy-phone:hover {
+            color: #4CAF50;
+        }
+        .copy-phone::after {
+            content: "Copy";
+            position: absolute;
+            background: #333;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 12px;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .copy-phone:hover::after {
+            opacity: 1;
+        }
+        .copy-phone.copied::after {
+            content: "Copied!";
+            background: #4CAF50;
+        }
+    </style>
 </head>
 <body class="is-preload">
 
@@ -44,18 +76,18 @@
         <!-- One -->
         <section id="one" class="tiles">
             <article>
-									<span class="image">
-										<img src="images/robocar.jpg" alt=""/>
-									</span>
+                <span class="image">
+                    <img src="images/robocar.jpg" alt=""/>
+                </span>
                 <header class="major">
                     <h3><a href="robocar.html" class="link">Robocar</a></h3>
                     <p>Autonomous RC car</p>
                 </header>
             </article>
             <article>
-									<span class="image">
-										<img src="images/localshirt.png" alt=""/>
-									</span>
+                <span class="image">
+                    <img src="images/localshirt.png" alt=""/>
+                </span>
                 <header class="major">
                     <h3><a href="landing.html" class="link">LocalShirt</a></h3>
                     <p>Image similarity calculator</p>
@@ -65,50 +97,6 @@
 
     </div>
 
-    <!-- Contact -->
-    <section id="contact">
-        <div class="inner">
-            <section>
-                <form method="post" action="mailto:quentin.caniou2002@gmail.com" enctype="text/plain">
-                    <div class="fields">
-                        <div class="field half">
-                            <label for="name">Name</label>
-                            <input type="text" name="name" id="name" required/>
-                        </div>
-                        <div class="field half">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" required/>
-                        </div>
-                        <div class="field">
-                            <label for="message">Message</label>
-                            <textarea name="message" id="message" rows="6" required></textarea>
-                        </div>
-                    </div>
-                    <ul class="actions">
-                        <li><input type="submit" value="Send Message" class="primary"/></li>
-                        <li><input type="reset" value="Clear"/></li>
-                    </ul>
-                </form>
-            </section>
-            <section class="split">
-                <section>
-                    <div class="contact-method">
-                        <span class="icon solid alt fa-envelope"></span>
-                        <h3>Email</h3>
-                        <a href="mailto:quentin.caniou2002@gmail.com">quentin.caniou2002@gmail.com</a>
-                    </div>
-                </section>
-                <section>
-                    <div class="contact-method">
-                        <span class="icon solid alt fa-phone"></span>
-                        <h3>Phone</h3>
-                        <span>+33 6 64 90 94 52</span>
-                    </div>
-                </section>
-            </section>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer id="footer">
         <div class="inner">
@@ -117,6 +105,12 @@
                         class="label">GitHub</span></a></li>
                 <li><a href="https://www.linkedin.com/in/quentin-caniou-64935a1ab/"
                        class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                <li>
+                    <span class="copy-phone" onclick="copyPhoneNumber()" title="Click to copy">
+                        <span class="icon solid alt fa-phone"></span>
+                        <span class="phone-text">+33 6 64 90 94 52</span>
+                    </span>
+                </li>
             </ul>
             <ul class="copyright">
                 <li>&copy; Quentin Caniou</li>
@@ -135,6 +129,43 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+
+<script>
+    function copyPhoneNumber() {
+        const phoneNumber = "+33 6 64 90 94 52";
+
+        // Modern clipboard API method
+        navigator.clipboard.writeText(phoneNumber).then(() => {
+            // Visual feedback
+            const phoneElement = document.querySelector('.copy-phone');
+            phoneElement.classList.add('copied');
+            phoneElement.setAttribute('title', 'Copied!');
+
+            // Reset after 2 seconds
+            setTimeout(() => {
+                phoneElement.classList.remove('copied');
+                phoneElement.setAttribute('title', 'Click to copy');
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+
+            // Fallback for older browsers
+            const textarea = document.createElement('textarea');
+            textarea.value = phoneNumber;
+            document.body.appendChild(textarea);
+            textarea.select();
+
+            try {
+                document.execCommand('copy');
+                alert('Phone number copied to clipboard!');
+            } catch (err) {
+                alert('Failed to copy. Please manually select and copy the number.');
+            }
+
+            document.body.removeChild(textarea);
+        });
+    }
+</script>
 
 </body>
 </html>
