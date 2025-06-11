@@ -20,9 +20,11 @@
             position: relative;
             display: inline-block;
         }
+
         .copy-phone:hover {
             color: #4CAF50;
         }
+
         .copy-phone::after {
             content: "Copy";
             position: absolute;
@@ -37,9 +39,11 @@
             opacity: 0;
             transition: opacity 0.3s;
         }
+
         .copy-phone:hover::after {
             opacity: 1;
         }
+
         .copy-phone.copied::after {
             content: "Copied!";
             background: #4CAF50;
@@ -105,9 +109,11 @@
                         class="label">GitHub</span></a></li>
                 <li><a href="https://www.linkedin.com/in/quentin-caniou-64935a1ab/"
                        class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                <li><a href="mailto:quentin.caniou2002@gmail.com"><span class="icon solid alt fa-envelope"></span></a></li>
+                <li><a href="mailto:quentin.caniou2002@gmail.com" class="icon brands alt fa-envelope"><span
+                        class="Label" onclick="copyToClipboard('quentin.caniou2002@gmail.com', this)"></span></a>
+                </li>
                 <li>
-                    <span class="copy-phone" onclick="copyPhoneNumber()" title="Click to copy">
+                    <span class="copy-phone" onclick="copyToClipboard('+33 6 64 90 94 52', this)" title="Click to copy">
                         <span class="icon solid alt fa-phone"></span>
                     </span>
                 </li>
@@ -131,35 +137,33 @@
 <script src="assets/js/main.js"></script>
 
 <script>
-    function copyPhoneNumber() {
-        const phoneNumber = "+33 6 64 90 94 52";
-
+    // Generic copy function that takes the text to copy and the clicked element
+    function copyToClipboard(text, element) {
         // Modern clipboard API method
-        navigator.clipboard.writeText(phoneNumber).then(() => {
+        navigator.clipboard.writeText(text).then(() => {
             // Visual feedback
-            const phoneElement = document.querySelector('.copy-phone');
-            phoneElement.classList.add('copied');
-            phoneElement.setAttribute('title', 'Copied!');
+            element.classList.add('copied');
+            element.setAttribute('title', 'Copied!');
 
             // Reset after 2 seconds
             setTimeout(() => {
-                phoneElement.classList.remove('copied');
-                phoneElement.setAttribute('title', 'Click to copy');
+                element.classList.remove('copied');
+                element.setAttribute('title', 'Click to copy');
             }, 2000);
         }).catch(err => {
             console.error('Failed to copy: ', err);
 
             // Fallback for older browsers
             const textarea = document.createElement('textarea');
-            textarea.value = phoneNumber;
+            textarea.value = text;
             document.body.appendChild(textarea);
             textarea.select();
 
             try {
                 document.execCommand('copy');
-                alert('Phone number copied to clipboard!');
+                alert('Copied to clipboard: ' + text);
             } catch (err) {
-                alert('Failed to copy. Please manually select and copy the number.');
+                alert('Failed to copy. Please manually select and copy the text.');
             }
 
             document.body.removeChild(textarea);
