@@ -12,43 +12,6 @@ class PortfolioArticle extends HTMLElement {
         const link = this.getAttribute('link') || '#';
 
         this.shadowRoot.innerHTML = `
-      <style>
-        article {
-          transition: transform 0.3s ease;
-        }
-        article:hover {
-          transform: scale(1.02);
-        }
-        .image {
-          display: block;
-          width: 100%;
-          height: auto;
-          overflow: hidden;
-        }
-        .image img {
-          width: 100%;
-          height: auto;
-          transition: transform 0.3s ease;
-        }
-        article:hover .image img {
-          transform: scale(1.05);
-        }
-        header {
-          padding: 1em;
-          text-align: center;
-        }
-        h3 {
-          margin: 0 0 0.5em 0;
-        }
-        p {
-          margin: 0;
-          color: #666;
-        }
-        a {
-          text-decoration: none;
-          color: inherit;
-        }
-      </style>
       <article>
         <a href="${link}" class="link">
           <span class="image">
@@ -78,69 +41,12 @@ class PortfolioFooter extends HTMLElement {
         const linkedin = this.getAttribute('linkedin') || '';
 
         this.shadowRoot.innerHTML = `
-      <style>
-        .inner {
-          padding: 2em 0;
-          text-align: center;
-        }
-        .icons {
-          list-style: none;
-          padding: 0;
-          display: flex;
-          justify-content: center;
-          gap: 1em;
-          margin-bottom: 1em;
-        }
-        .icons a {
-          color: inherit;
-          transition: color 0.3s ease;
-        }
-        .icons a:hover {
-          color: #4CAF50;
-        }
-        .copyright {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-          font-size: 0.8em;
-          color: #666;
-        }
-        .copyright li {
-          display: inline;
-          margin: 0 0.5em;
-        }
-        .copyable {
-          cursor: pointer;
-          position: relative;
-        }
-        .copyable::after {
-          content: "Copy";
-          position: absolute;
-          background: #333;
-          color: white;
-          padding: 2px 6px;
-          border-radius: 3px;
-          font-size: 12px;
-          top: -25px;
-          left: 50%;
-          transform: translateX(-50%);
-          opacity: 0;
-          transition: opacity 0.3s;
-        }
-        .copyable:hover::after {
-          opacity: 1;
-        }
-        .copyable.copied::after {
-          content: "Copied!";
-          background: #4CAF50;
-        }
-      </style>
       <footer>
         <div class="inner">
           <ul class="icons">
             <li><a href="${github}" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
             <li><a href="${linkedin}" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-            <li><a href="mailto:${email}" class="icon brands alt fa-envelope copyable" onclick="copyToClipboard('${email}', this); return false;"><span class="label">Email</span></a></li>
+            <li><a href="#" class="icon brands alt fa-envelope copyable" onclick="copyToClipboard('${email}', this); return false;"><span class="label">Email</span></a></li>
             <li><a href="#" class="icon brands alt fa-phone copyable" onclick="copyToClipboard('${phone}', this); return false;"><span class="label">Phone</span></a></li>
           </ul>
           <ul class="copyright">
