@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 <head>
     <title>Portfolio Quentin Caniou</title>
@@ -13,42 +8,8 @@
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css"/>
     </noscript>
-    <style>
-        /* Add this style for the copy functionality */
-        .copy-phone {
-            cursor: pointer;
-            position: relative;
-            display: inline-block;
-        }
-
-        .copy-phone:hover {
-            color: #4CAF50;
-        }
-
-        .copy-phone::after {
-            content: "Copy";
-            position: absolute;
-            background: #333;
-            color: white;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-size: 12px;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .copy-phone:hover::after {
-            opacity: 1;
-        }
-
-        .copy-phone.copied::after {
-            content: "Copied!";
-            background: #4CAF50;
-        }
-    </style>
+    <!-- Load components script -->
+    <script src="components.js"></script>
 </head>
 <body class="is-preload">
 
@@ -67,67 +28,43 @@
                 <h1>Hi, my name is Quentin Caniou and I am an R&D AI engineer</h1>
             </header>
             <div class="content">
-                <p>I am passionate about AI, particularly computer vision.
-                    Check out my projects <a href="#one">here</a>!
-                    If you have any questions, please don't hesitate to contact me!</p>
+                <p>I am passionate about AI, particularly computer vision.</p>
+                <p>Check out my projects <a href="#one">here</a>!</p>
+                <p>If you have any questions, please don't hesitate to contact me!</p>
             </div>
         </div>
     </section>
 
     <!-- Main -->
     <div id="main">
-
-        <!-- One -->
         <section id="one" class="tiles">
-            <article>
-                <span class="image">
-                    <img src="images/robocar.jpg" alt=""/>
-                </span>
-                <header class="major">
-                    <h3><a href="robocar.html" class="link">Robocar</a></h3>
-                    <p>Autonomous RC car</p>
-                </header>
-            </article>
-            <article>
-                <span class="image">
-                    <img src="images/localshirt.png" alt=""/>
-                </span>
-                <header class="major">
-                    <h3><a href="landing.html" class="link">LocalShirt</a></h3>
-                    <p>Image similarity calculator</p>
-                </header>
-            </article>
-        </section>
+            <portfolio-article
+                    title="Robocar"
+                    description="Autonomous RC car"
+                    image="images/robocar.jpg"
+                    link="robocar.html">
+            </portfolio-article>
 
+            <portfolio-article
+                    title="LocalShirt"
+                    description="Image similarity calculator"
+                    image="images/localshirt.png"
+                    link="landing.html">
+            </portfolio-article>
+        </section>
     </div>
 
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="inner">
-            <ul class="icons">
-                <li><a href="https://github.com/QuentinCn" class="icon brands alt fa-github"><span
-                        class="label">GitHub</span></a></li>
-                <li><a href="https://www.linkedin.com/in/quentin-caniou-64935a1ab/"
-                       class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                <li><a href="mailto:quentin.caniou2002@gmail.com" class="icon brands alt fa-envelope"><span
-                        class="Label" onclick="copyToClipboard('quentin.caniou2002@gmail.com', this)"></span></a>
-                </li>
-                <li>
-                    <span class="copy-phone" onclick="copyToClipboard('+33 6 64 90 94 52', this)" title="Click to copy">
-                        <span class="icon solid alt fa-phone"></span>
-                    </span>
-                </li>
-            </ul>
-            <ul class="copyright">
-                <li>&copy; Quentin Caniou</li>
-                <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-            </ul>
-        </div>
-    </footer>
+    <!-- Footer Component -->
+    <portfolio-footer
+            email="quentin.caniou2002@gmail.com"
+            phone="+33 6 64 90 94 52"
+            github="https://github.com/QuentinCn"
+            linkedin="https://www.linkedin.com/in/quentin-caniou-64935a1ab/">
+    </portfolio-footer>
 
 </div>
 
-<!-- Scripts -->
+<!-- Original scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
@@ -135,41 +72,6 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
-
-<script>
-    // Generic copy function that takes the text to copy and the clicked element
-    function copyToClipboard(text, element) {
-        // Modern clipboard API method
-        navigator.clipboard.writeText(text).then(() => {
-            // Visual feedback
-            element.classList.add('copied');
-            element.setAttribute('title', 'Copied!');
-
-            // Reset after 2 seconds
-            setTimeout(() => {
-                element.classList.remove('copied');
-                element.setAttribute('title', 'Click to copy');
-            }, 2000);
-        }).catch(err => {
-            console.error('Failed to copy: ', err);
-
-            // Fallback for older browsers
-            const textarea = document.createElement('textarea');
-            textarea.value = text;
-            document.body.appendChild(textarea);
-            textarea.select();
-
-            try {
-                document.execCommand('copy');
-                alert('Copied to clipboard: ' + text);
-            } catch (err) {
-                alert('Failed to copy. Please manually select and copy the text.');
-            }
-
-            document.body.removeChild(textarea);
-        });
-    }
-</script>
 
 </body>
 </html>

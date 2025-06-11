@@ -5,250 +5,206 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Robocar - Quentin Caniou</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+    <title>Robocar - Quentin Caniou</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css"/>
+    </noscript>
+</head>
+<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<!-- Wrapper -->
+<div id="wrapper">
 
-				<!-- Header -->
-				<!-- Note: The "styleN" class below should match that of the banner element. -->
-					<header id="header" class="alt style2">
-						<a href="index.html" class="logo"><strong>Robocar</strong> <span>by Quentin Caniou</span></a>
-<!--						<nav>-->
-<!--							<a href="#menu">Menu</a>-->
-<!--						</nav>-->
-					</header>
+    <!-- Header -->
+    <!-- Note: The "styleN" class below should match that of the banner element. -->
+    <header id="header" class="alt style2">
+        <a href="index.html" class="logo"><strong>Robocar</strong> <span>by Quentin Caniou</span></a>
+        <!--						<nav>-->
+        <!--							<a href="#menu">Menu</a>-->
+        <!--						</nav>-->
+    </header>
 
-				<!-- Menu -->
-<!--					<nav id="menu">-->
-<!--						<ul class="links">-->
-<!--							<li><a href="index.html">Home</a></li>-->
-<!--							<li><a href="landing.html">Landing</a></li>-->
-<!--							<li><a href="generic.html">Generic</a></li>-->
-<!--							<li><a href="elements.html">Elements</a></li>-->
-<!--						</ul>-->
-<!--						<ul class="actions stacked">-->
-<!--							<li><a href="#" class="button primary fit">Get Started</a></li>-->
-<!--							<li><a href="#" class="button fit">Log In</a></li>-->
-<!--						</ul>-->
-<!--					</nav>-->
+    <!-- Menu -->
+    <!--					<nav id="menu">-->
+    <!--						<ul class="links">-->
+    <!--							<li><a href="index.html">Home</a></li>-->
+    <!--							<li><a href="landing.html">Landing</a></li>-->
+    <!--							<li><a href="generic.html">Generic</a></li>-->
+    <!--							<li><a href="elements.html">Elements</a></li>-->
+    <!--						</ul>-->
+    <!--						<ul class="actions stacked">-->
+    <!--							<li><a href="#" class="button primary fit">Get Started</a></li>-->
+    <!--							<li><a href="#" class="button fit">Log In</a></li>-->
+    <!--						</ul>-->
+    <!--					</nav>-->
 
-				<!-- Banner -->
-				<!-- Note: The "styleN" class below should match that of the header element. -->
-					<section id="banner" class="style2">
-						<div class="inner">
+    <!-- Banner -->
+    <!-- Note: The "styleN" class below should match that of the header element. -->
+    <section id="banner" class="style2">
+        <div class="inner">
 							<span class="image">
-								<img src="images/robocar.jpg" alt="" />
+								<img src="images/robocar.jpg" alt=""/>
 							</span>
-							<header class="major">
-								<h1>Robocar</h1>
-							</header>
-							<div class="content">
-								<p>I started this project with a friend, then my school got interested in it and asked us to make it a national module.</p>
-							</div>
-						</div>
-					</section>
+            <header class="major">
+                <h1>Robocar</h1>
+            </header>
+            <div class="content">
+                <p>I started this project with a friend, then my school got interested in it and asked us to make it a
+                    national module.</p>
+            </div>
+        </div>
+    </section>
 
-				<!-- Main -->
-					<div id="main">
+    <!-- Main -->
+    <div id="main">
 
-						<!-- One -->
-							<section id="one">
-								<div class="inner">
-									<header class="major">
-										<h2>The project is splitted in mulitple parts</h2>
-									</header>
-									<p>The main parts of this project are:
-										<ul>
-										<li>AIs<ul>
-											<li>MaskGenerator</li>
-											<li>RacingSimulator</li>
-										</ul></li>
-										<li>Simulation</li>
-										<li>Hardware</li>
-										<li>Embedded software</li>
-										<li>3D printed parts</li>
-										</ul>
-									I will only present you the parts i did
-									</p>
-								</div>
-							</section>
+        <!-- One -->
+        <section id="one">
+            <div class="inner">
+                <header class="major">
+                    <h2>The project is splitted in mulitple parts</h2>
+                </header>
+                <p>The main parts of this project are:
+                <ul>
+                    <li>AIs
+                        <ul>
+                            <li><a href="#maskgenerator">MaskGenerator</a></li>
+                            <li><a href="#racingsimulation">RacingSimulator</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#simulation">Simulation</a></li>
+                    <li>Hardware</li>
+                    <li>Embedded software</li>
+                    <li>3D printed parts</li>
+                </ul>
+                I will only present you the parts i did
+                </p>
+            </div>
+        </section>
 
-						<!-- Two -->
-							<section id="two" class="spotlights">
-								<!-- MaskGenerator -->
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/maskgenerator.png" alt="" data-position="center center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>MaskGenerator</h3>
-											</header>
-											<p>MaskGenerator is an AI which generate a mask of lines from an image of a road. It is entirely train from the <a href="#simulation">simulation</a></p>
-											<ul class="actions">
-												<li><a href="maskgenerator.html" class="button">Learn more</a></li>
-											</ul>
-											<li><a href="https://github.com/Tek5-robocar/MaskGenerator" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-										</div>
-									</div>
-								</section>
-								<!-- RacingSimulator -->
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/racingsimulator.png" alt="" data-position="top center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>RacingSimulator</h3>
-											</header>
-											<p>This is an AI that uses 2D raycast to choose a direction and a speed</p>
-											<ul class="actions">
-												<li><a href="racingsimulator.html" class="button">Learn more</a></li>
-											</ul>
-											<li><a href="https://github.com/Tek5-robocar/RacingSimulator" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-										</div>
-									</div>
-								</section>
-								<!-- Simulation -->
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic10.jpg" alt="" data-position="25% 25%" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Simulation</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-								<!-- 3D print -->
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic09.jpg" alt="" data-position="top center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>3D print</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-							</section>
+        <!-- Two -->
+        <section id="two" class="spotlights">
+            <!-- MaskGenerator -->
+            <section id="maskgenerator">
+                <a href="generic.html" class="image">
+                    <img src="images/maskgenerator.png" alt="" data-position="center center"/>
+                </a>
+                <div class="content">
+                    <div class="inner">
+                        <header class="major">
+                            <h3>MaskGenerator</h3>
+                        </header>
+                        <p>MaskGenerator is an AI which generate a mask of lines from an image of a road. It is entirely
+                            train from the <a href="#simulation">simulation</a></p>
+                        <ul class="actions">
+                            <li><a href="maskgenerator.html" class="button">Learn more</a></li>
+                        </ul>
+                        <li><a href="https://github.com/Tek5-robocar/MaskGenerator"
+                               class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                    </div>
+                </div>
+            </section>
+            <!-- RacingSimulator -->
+            <section id="racingsimulation">
+                <a href="generic.html" class="image">
+                    <img src="images/racingsimulator.png" alt="" data-position="top center"/>
+                </a>
+                <div class="content">
+                    <div class="inner">
+                        <header class="major">
+                            <h3>RacingSimulator</h3>
+                        </header>
+                        <p>This is an AI that uses 2D raycast to choose a direction and a speed</p>
+                        <ul class="actions">
+                            <li><a href="racingsimulator.html" class="button">Learn more</a></li>
+                        </ul>
+                        <li><a href="https://github.com/Tek5-robocar/RacingSimulator" class="icon brands alt fa-github"><span
+                                class="label">GitHub</span></a></li>
+                    </div>
+                </div>
+            </section>
+            <!-- Simulation -->
+            <section id="simulation">
+                <a href="generic.html" class="image">
+                    <img src="images/pic10.jpg" alt="" data-position="25% 25%"/>
+                </a>
+                <div class="content">
+                    <div class="inner">
+                        <header class="major">
+                            <h3>Simulation</h3>
+                        </header>
+                        <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus
+                            condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna
+                            pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et
+                            sagittis tempus.</p>
+                        <ul class="actions">
+                            <li><a href="generic.html" class="button">Learn more</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- 3D print -->
+            <section>
+                <a href="generic.html" class="image">
+                    <img src="images/pic09.jpg" alt="" data-position="top center"/>
+                </a>
+                <div class="content">
+                    <div class="inner">
+                        <header class="major">
+                            <h3>3D print</h3>
+                        </header>
+                        <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus
+                            condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna
+                            pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et
+                            sagittis tempus.</p>
+                        <ul class="actions">
+                            <li><a href="generic.html" class="button">Learn more</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
 
-						<!-- Three -->
-							<section id="three">
-								<div class="inner">
-									<header class="major">
-										<h2>Massa libero</h2>
-									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button next">Get Started</a></li>
-									</ul>
-								</div>
-							</section>
+        <!-- Three -->
+        <section id="three">
+            <div class="inner">
+                <header class="major">
+                    <h2>Massa libero</h2>
+                </header>
+                <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna
+                    sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas
+                    laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat
+                    tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et
+                    feugiat tempus.</p>
+                <ul class="actions">
+                    <li><a href="generic.html" class="button next">Get Started</a></li>
+                </ul>
+            </div>
+        </section>
 
-					</div>
+    </div>
 
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="#">information@untitled.tld</a>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>(000) 000-0000 x12387</span>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>1234 Somewhere Road #5432<br />
-										Nashville, TN 00000<br />
-										United States of America</span>
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>
+    <portfolio-footer
+            email="quentin.caniou2002@gmail.com"
+            phone="+33 6 64 90 94 52"
+            github="https://github.com/QuentinCn"
+            linkedin="https://www.linkedin.com/in/quentin-caniou-64935a1ab/">
+    </portfolio-footer>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-<!--								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>-->
-<!--								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>-->
-<!--								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>-->
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+</div>
 
-			</div>
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
