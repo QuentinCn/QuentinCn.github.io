@@ -5,120 +5,182 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>MaskGenerator - Quentin Caniou</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+	<title>Real-Time Lane Segmentation AI - Quentin Caniou</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>
+		.model-comparison {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 2rem;
+			margin: 2rem 0;
+		}
+		.model-card {
+			flex: 1;
+			min-width: 300px;
+			padding: 1.5rem;
+			background: rgba(255,255,255,0.05);
+			border-radius: 8px;
+			border-left: 3px solid #4caf50;
+		}
+		.performance-metrics {
+			margin: 2rem 0;
+			overflow-x: auto;
+		}
+	</style>
+</head>
+<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<!-- Wrapper -->
+<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo"><strong>Mask Generator</strong> <span>by Quentin Caniou</span></a>
-					</header>
+	<!-- Header -->
+	<header id="header">
+		<a href="index.html" class="logo"><strong>Portfolio</strong> <span>by Quentin Caniou</span></a>
+	</header>
 
-				<!-- Main -->
-					<div id="main" class="alt">
+	<!-- Main -->
+	<div id="main" class="alt">
 
-						<!-- One -->
-							<section id="one">
-								<div class="inner">
-									<header class="major">
-										<h1>Generic</h1>
-									</header>
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-								</div>
-							</section>
+		<!-- One -->
+		<section id="one">
+			<div class="inner">
+				<header class="major">
+					<h1>Real-Time Lane Segmentation AI</h1>
+				</header>
+				<span class="image main"><img src="images/maskgenerator.png" alt="Lane segmentation comparison between simulation and real-world images" /></span>
 
+				<h2>Project Overview</h2>
+				<p>This computer vision system performs real-time lane segmentation, trained on synthetic data from my custom simulator and deployed on an autonomous RC car platform. The challenge was balancing inference speed (for real-time operation) with segmentation accuracy.</p>
+
+				<h2>Technical Approach</h2>
+				<div class="model-comparison">
+					<div class="model-card">
+						<h3>Architecture Selection</h3>
+						<p>Evaluated multiple neural network architectures:</p>
+						<ul>
+							<li><strong>U-Net</strong>: High accuracy but computationally heavy</li>
+							<li><strong>U-Net3+</strong>: Improved feature fusion</li>
+							<li><strong>EfficientLiteSeg</strong>: Optimized for edge devices</li>
+						</ul>
 					</div>
+					<div class="model-card">
+						<h3>Optimization Strategy</h3>
+						<ul>
+							<li>Quantized models for faster inference</li>
+							<li>Custom dataset versions for progressive training</li>
+							<li>Pruned network layers where possible</li>
+						</ul>
+					</div>
+				</div>
 
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="#">information@untitled.tld</a>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>(000) 000-0000 x12387</span>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>1234 Somewhere Road #5432<br />
-										Nashville, TN 00000<br />
-										United States of America</span>
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>
+				<h2>Performance Benchmarking</h2>
+				<div class="performance-metrics">
+					<span class="image main"><img src="images/benchmark_maskgenerator.png" alt="Model performance comparison chart showing accuracy vs inference time" /></span>
+				</div>
+				<p>The benchmark revealed EfficientLiteSeg as the optimal choice for our application, achieving 87% of U-Net's accuracy while being 3.2× faster on embedded hardware. This trade-off was acceptable given the real-time requirements of the autonomous system.</p>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+				<h2>Dataset Evolution</h2>
+				<p>The model was trained on progressively refined dataset versions:</p>
+				<ul>
+					<li><strong>v0.20</strong>: Expanded lane markings to prevent segmentation holes</li>
+					<li><strong>v0.36</strong>: Added camera height/angle variations for generalization</li>
+					<li><strong>v0.39</strong>: Simplified for stable training on lightweight models</li>
+				</ul>
 
+				<h2>Training Process</h2>
+				<div class="performance-metrics">
+					<span class="image main"><img src="images/unet_train_graph.png" alt="U-Net training metrics over 100 epochs" /></span>
+				</div>
+				<p>The U-Net baseline achieved 94% mIoU on v0.36 data after 100 epochs, demonstrating the potential ceiling for our segmentation task. While we couldn't deploy this computationally intensive model, its performance guided our expectations for the optimized EfficientLiteSeg implementation.</p>
 			</div>
+		</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	</div>
+	<footer id="footer">
+		<div class="inner">
+			<ul class="icons">
+				<li><a href="https://github.com/QuentinCn" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+				<li><a href="https://www.linkedin.com/in/quentin-caniou-64935a1ab/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+				<li><a class="icon solid alt fa-envelope copyable" onclick="copyToClipboard('quentin.caniou2002@gmail.com', this)"><span class="label">Email</span></a></li>
+				<li><a class="icon solid alt fa-phone copyable" onclick="copyToClipboard('+33 6 64 90 94 52', this)"><span class="label">Phone</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; Quentin Caniou</li>
+				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</footer>
+</div>
 
-	</body>
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+	// Enhanced clipboard function
+	function copyToClipboard(text, element) {
+		const tempEl = document.createElement('textarea');
+		tempEl.value = text;
+		document.body.appendChild(tempEl);
+		tempEl.select();
+
+		try {
+			document.execCommand('copy');
+			showTooltip(element, 'Copied to clipboard!');
+		} catch (err) {
+			console.error('Copy failed:', err);
+		}
+
+		document.body.removeChild(tempEl);
+	}
+
+	function showTooltip(element, message) {
+		const tooltip = document.createElement('div');
+		tooltip.className = 'copy-tooltip';
+		tooltip.textContent = message;
+
+		const rect = element.getBoundingClientRect();
+		tooltip.style.left = `${rect.left + window.scrollX}px`;
+		tooltip.style.top = `${rect.top + window.scrollY - 35}px`;
+
+		document.body.appendChild(tooltip);
+
+		setTimeout(() => {
+			tooltip.style.opacity = '0';
+			setTimeout(() => tooltip.remove(), 300);
+		}, 1500);
+	}
+
+	document.querySelectorAll('.copyable').forEach(el => {
+		el.addEventListener('click', function(e) {
+			e.preventDefault();
+			const text = this.classList.contains('fa-envelope')
+					? 'quentin.caniou2002@gmail.com'
+					: '+33 6 64 90 94 52';
+			copyToClipboard(text, this);
+		});
+	});
+</script>
+<style>
+	.copy-tooltip {
+		position: absolute;
+		background: rgba(0,0,0,0.8);
+		color: white;
+		padding: 6px 12px;
+		border-radius: 4px;
+		font-size: 14px;
+		z-index: 100;
+		pointer-events: none;
+		transition: opacity 0.3s;
+	}
+</style>
+</body>
 </html>

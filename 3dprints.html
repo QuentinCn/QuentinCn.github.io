@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+	<title>Custom 3D Printed Components - Quentin Caniou</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+	<!-- Header -->
+	<header id="header">
+		<a href="index.html" class="logo"><strong>Portfolio</strong> <span>by Quentin Caniou</span></a>
+	</header>
+
+	<!-- Main -->
+	<div id="main" class="alt">
+
+		<!-- One -->
+		<section id="one">
+			<div class="inner">
+				<header class="major">
+					<h1>Custom 3D Printed Components</h1>
+				</header>
+				<span class="image main"><img src="images/3dprints.jpg" alt="Collection of 3D printed automotive components" /></span>
+
+				<h2>Project Overview</h2>
+				<p>During the vehicle's electrical system overhaul, I designed and manufactured custom mounting solutions to securely integrate new components while maintaining accessibility and serviceability.</p>
+
+				<h2>Key Components</h2>
+				<div class="box alt">
+					<div class="row gtr-50 gtr-uniform">
+						<div class="col-6">
+							<h3>VESC Motor Controller Bracket</h3>
+							<span class="image fit"><img src="images/vesc_support.jpg" alt="3D printed VESC mounting bracket" /></span>
+							<p>A vibration-resistant mount with integrated cable routing channels for the Vedder Electronic Speed Controller.</p>
+						</div>
+						<div class="col-6">
+							<h3>Modular Battery Enclosure</h3>
+							<span class="image fit"><img src="images/battery_box.jpg" alt="Custom lithium battery housing" /></span>
+							<p>Lightweight protective casing featuring ventilation channels and quick-release mounting points.</p>
+						</div>
+						<div class="col-6">
+							<h3>Electronics Mainboard</h3>
+							<span class="image fit"><img src="images/plaque_support.jpg" alt="Jetson Nano and DC converter mounting plate" /></span>
+							<p>Central mounting platform for the Jetson Nano AI computer and power conversion modules, designed with service access in mind.</p>
+						</div>
+						<div class="col-6">
+							<h3>Adjustable Camera Mount</h3>
+							<span class="image fit"><img src="images/camera_support.jpg" alt="Camera mounting bracket with angle adjustment" /></span>
+							<p>Precision mount allowing ±15° of camera angle adjustment with secure locking mechanism.</p>
+						</div>
+					</div>
+				</div>
+
+				<h2>Design & Manufacturing Process</h2>
+				<div class="row">
+					<div class="col-6 col-12-small">
+						<h3>CAD Modeling</h3>
+						<ul>
+							<li>Used FreeCAD for parametric 3D modeling</li>
+							<li>Iterative design process with functional prototypes</li>
+							<li>DFM (Design for Manufacturing) considerations for FDM printing</li>
+						</ul>
+					</div>
+					<div class="col-6 col-12-small">
+						<h3>Production</h3>
+						<ul>
+							<li>Sliced with PrusaSlicer using optimized profiles</li>
+							<li>Printed in PLA and PLA+</li>
+							<li>Post-processing including drilling and thread inserts</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+	<footer id="footer">
+		<div class="inner">
+			<ul class="icons">
+				<li><a href="https://github.com/QuentinCn" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+				<li><a href="https://www.linkedin.com/in/quentin-caniou-64935a1ab/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+				<li><a class="icon solid alt fa-envelope copyable" onclick="copyToClipboard('quentin.caniou2002@gmail.com', this)"><span class="label">Email</span></a></li>
+				<li><a class="icon solid alt fa-phone copyable" onclick="copyToClipboard('+33 6 64 90 94 52', this)"><span class="label">Phone</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; Quentin Caniou</li>
+				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</footer>
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+	// Enhanced copy function
+	function copyToClipboard(text, element, event) {
+		const tempInput = document.createElement('input');
+		tempInput.value = text;
+		document.body.appendChild(tempInput);
+		tempInput.select();
+
+		try {
+			document.execCommand('copy');
+			showTooltip(element, 'Copied!');
+		} catch (err) {
+			showTooltip(element, 'Failed to copy');
+		}
+
+		document.body.removeChild(tempInput);
+	}
+
+	function showTooltip(element, message) {
+		const tooltip = document.createElement('div');
+		tooltip.className = 'copy-tooltip';
+		tooltip.textContent = message;
+
+		const rect = element.getBoundingClientRect();
+		tooltip.style.left = `${rect.left + window.scrollX}px`;
+		tooltip.style.top = `${rect.top + window.scrollY - 30}px`;
+
+		document.body.appendChild(tooltip);
+
+		setTimeout(() => {
+			tooltip.style.opacity = '0';
+			setTimeout(() => tooltip.remove(), 300);
+		}, 1500);
+	}
+
+	document.querySelectorAll('.copyable').forEach(el => {
+		el.addEventListener('click', function(e) {
+			e.preventDefault();
+			const text = this.classList.contains('fa-envelope')
+					? 'quentin.caniou2002@gmail.com'
+					: '+33 6 64 90 94 52';
+			copyToClipboard(text, this, e);
+		});
+	});
+</script>
+<style>
+	.copy-tooltip {
+		position: absolute;
+		background: rgba(0,0,0,0.8);
+		color: white;
+		padding: 5px 10px;
+		border-radius: 4px;
+		font-size: 14px;
+		z-index: 100;
+		transition: opacity 0.3s;
+		pointer-events: none;
+	}
+
+	.box alt .row {
+		margin-bottom: 2rem;
+	}
+
+	h3 {
+		margin-top: 0.5rem;
+	}
+</style>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+	<title>LocalShirt - AI-Powered Fashion Platform | Quentin Caniou</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>
+		.project-highlights {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 2rem;
+			margin: 2rem 0;
+		}
+		.highlight-card {
+			flex: 1;
+			min-width: 250px;
+			padding: 1.5rem;
+			background: rgba(255,255,255,0.05);
+			border-radius: 8px;
+			border-top: 3px solid #4caf50;
+		}
+		.placeholder-content {
+			text-align: center;
+			padding: 4rem 0;
+			background: rgba(255,255,255,0.03);
+			border-radius: 8px;
+			margin: 2rem 0;
+		}
+	</style>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+	<!-- Header -->
+	<header id="header" class="alt style2">
+		<a href="index.html" class="logo"><strong>Portfolio</strong> <span>by Quentin Caniou</span></a>
+	</header>
+
+	<!-- Banner -->
+	<section id="banner" class="style2">
+		<div class="inner">
+							<span class="image">
+								<img src="images/localshirt.png" alt="LocalShirt platform interface" />
+							</span>
+			<header class="major">
+				<h1>LocalShirt</h1>
+			</header>
+			<div class="content">
+				<p>AI-driven fashion personalization platform - Capstone Project</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Main -->
+	<div id="main">
+
+		<!-- Project Overview -->
+		<section id="one">
+			<div class="inner">
+				<header class="major">
+					<h2>Project Overview</h2>
+				</header>
+				<p>As AI Lead for this graduation project, I architected and implemented machine learning systems that power LocalShirt's personalized fashion recommendations. The platform combines computer vision and recommendation algorithms to connect users with local designers.</p>
+
+				<div class="project-highlights">
+					<div class="highlight-card">
+						<h3>My Role</h3>
+						<ul>
+							<li>AI System Architecture</li>
+							<li>Computer Vision Development</li>
+							<li>Recommendation Algorithms</li>
+							<li>Team Leadership</li>
+						</ul>
+					</div>
+					<div class="highlight-card">
+						<h3>Technologies</h3>
+						<ul>
+							<li>Python/TensorFlow</li>
+							<li>Computer Vision (OpenCV)</li>
+							<li>Recommendation Engines</li>
+							<li>Cloud Deployment</li>
+						</ul>
+					</div>
+					<div class="highlight-card">
+						<h3>Impact</h3>
+						<ul>
+							<li>Personalized user experience</li>
+							<li>Increased designer visibility</li>
+							<li>Reduced returns through better fit prediction</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="placeholder-content">
+					<h3>Project Details Coming Soon</h3>
+					<p>I'm currently preparing a detailed case study of this project.</p>
+					<p>For immediate inquiries about my work on LocalShirt, please contact me via email or LinkedIn.</p>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<footer id="footer">
+		<div class="inner">
+			<ul class="icons">
+				<li><a href="https://github.com/QuentinCn" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+				<li><a href="https://www.linkedin.com/in/quentin-caniou-64935a1ab/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+				<li><a class="icon solid alt fa-envelope copyable" onclick="copyToClipboard('quentin.caniou2002@gmail.com', this)"><span class="label">Email</span></a></li>
+				<li><a class="icon solid alt fa-phone copyable" onclick="copyToClipboard('+33 6 64 90 94 52', this)"><span class="label">Phone</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; Quentin Caniou</li>
+				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</footer>
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+	// Enhanced clipboard function
+	function copyToClipboard(text, element) {
+		const tempInput = document.createElement('input');
+		tempInput.value = text;
+		document.body.appendChild(tempInput);
+		tempInput.select();
+
+		try {
+			document.execCommand('copy');
+			showTooltip(element, 'Copied to clipboard!');
+		} catch (err) {
+			showTooltip(element, 'Failed to copy');
+		}
+
+		document.body.removeChild(tempInput);
+	}
+
+	function showTooltip(element, message) {
+		const tooltip = document.createElement('div');
+		tooltip.className = 'copy-tooltip';
+		tooltip.textContent = message;
+
+		const rect = element.getBoundingClientRect();
+		tooltip.style.left = `${rect.left + window.scrollX}px`;
+		tooltip.style.top = `${rect.top + window.scrollY - 35}px`;
+
+		document.body.appendChild(tooltip);
+
+		setTimeout(() => {
+			tooltip.style.opacity = '0';
+			setTimeout(() => tooltip.remove(), 300);
+		}, 1500);
+	}
+
+	document.querySelectorAll('.copyable').forEach(el => {
+		el.addEventListener('click', function(e) {
+			e.preventDefault();
+			const text = this.classList.contains('fa-envelope')
+					? 'quentin.caniou2002@gmail.com'
+					: '+33 6 64 90 94 52';
+			copyToClipboard(text, this);
+		});
+	});
+</script>
+<style>
+	.copy-tooltip {
+		position: absolute;
+		background: rgba(0,0,0,0.8);
+		color: white;
+		padding: 6px 12px;
+		border-radius: 4px;
+		font-size: 14px;
+		z-index: 100;
+		pointer-events: none;
+		transition: opacity 0.3s;
+	}
+</style>
+</body>
+</html>

@@ -5,120 +5,205 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>RacingSimulator - Quentin Caniou</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+	<title>Autonomous Racing AI Development - Quentin Caniou</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>
+		.video-container {
+			margin: 2rem 0;
+			text-align: center;
+		}
+		video {
+			max-width: 100%;
+			border-radius: 4px;
+			box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+		}
+		.tech-stack {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1rem;
+			margin: 2rem 0;
+		}
+		.tech-card {
+			flex: 1;
+			min-width: 200px;
+			padding: 1rem;
+			background: rgba(255,255,255,0.05);
+			border-radius: 4px;
+		}
+	</style>
+</head>
+<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<!-- Wrapper -->
+<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo"><strong>RacingSimulator</strong> <span>by Quentin Caniou</span></a>
-					</header>
+	<!-- Header -->
+	<header id="header">
+		<a href="index.html" class="logo"><strong>Portfolio</strong> <span>by Quentin Caniou</span></a>
+	</header>
 
-				<!-- Main -->
-					<div id="main" class="alt">
+	<!-- Main -->
+	<div id="main" class="alt">
 
-						<!-- One -->
-							<section id="one">
-								<div class="inner">
-									<header class="major">
-										<h1>Generic</h1>
-									</header>
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-								</div>
-							</section>
+		<!-- One -->
+		<section id="one">
+			<div class="inner">
+				<header class="major">
+					<h1>Autonomous Racing AI Development</h1>
+				</header>
+				<span class="image main"><img src="images/racingsimulator.png" alt="Racing simulation environment screenshot" /></span>
 
+				<h2>Project Overview</h2>
+				<p>This autonomous control system was developed using a custom simulation environment I created specifically for training AI agents in vehicle dynamics and racing line optimization.</p>
+
+				<div class="tech-stack">
+					<div class="tech-card">
+						<h3>Simulation Environment</h3>
+						<ul>
+							<li>Custom physics engine</li>
+							<li>Configurable track generation</li>
+							<li>Sensor data emulation</li>
+						</ul>
 					</div>
+					<div class="tech-card">
+						<h3>AI Framework</h3>
+						<ul>
+							<li>Python-based training pipeline</li>
+							<li>PyTorch integration</li>
+							<li>OpenAI Gym interface</li>
+						</ul>
+					</div>
+				</div>
 
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="#">information@untitled.tld</a>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>(000) 000-0000 x12387</span>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>1234 Somewhere Road #5432<br />
-										Nashville, TN 00000<br />
-										United States of America</span>
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>
+				<h2>Development Journey</h2>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+				<h3>Phase 1: Supervised Learning Approach</h3>
+				<div class="video-container">
+					<video controls muted playsinline>
+						<source src="supervised_racingsimulation.mp4" type="video/mp4">
+						Your browser does not support HTML5 video.
+					</video>
+				</div>
+				<p>Initial implementation used supervised learning with:</p>
+				<ul>
+					<li><strong>Regression models</strong> for continuous control outputs</li>
+					<li><strong>Random Forest classifiers</strong> for discrete action selection</li>
+				</ul>
+				<p>While these produced functional results, they demonstrated limitations in adaptability and required extensive labeled training data.</p>
 
+				<h3>Phase 2: Reinforcement Learning Transition</h3>
+				<p>Recognizing the constraints of supervised methods, I transitioned to reinforcement learning:</p>
+				<ul>
+					<li><strong>Initial attempt with Deep DQN</strong> showed no convergence due to simulation environment issues</li>
+					<li><strong>Second attempt using PPO in Racing Gym environment</strong> confirmed algorithm viability</li>
+					<li><strong>Simulation debugging</strong> resolved physics and reward function issues</li>
+					<li><strong>PPO implementation</strong> (Proximal Policy Optimization) proved successful</li>
+				</ul>
+
+				<h3>Current Progress</h3>
+				<div class="video-container">
+					<video controls muted playsinline>
+						<source src="rl_racingsimulation.mp4" type="video/mp4">
+						Your browser does not support HTML5 video.
+					</video>
+					<p><em>PPO agent training at 3× speed</em></p>
+				</div>
+				<p>The current implementation shows promising results with:</p>
+				<ul>
+					<li>Stable policy convergence</li>
+					<li>Progressive lap time improvements</li>
+					<li>Emergent racing line strategies</li>
+				</ul>
 			</div>
+		</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	</div>
+	<footer id="footer">
+		<div class="inner">
+			<ul class="icons">
+				<li><a href="https://github.com/QuentinCn" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+				<li><a href="https://www.linkedin.com/in/quentin-caniou-64935a1ab/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+				<li><a class="icon solid alt fa-envelope copyable" onclick="copyToClipboard('quentin.caniou2002@gmail.com', this)"><span class="label">Email</span></a></li>
+				<li><a class="icon solid alt fa-phone copyable" onclick="copyToClipboard('+33 6 64 90 94 52', this)"><span class="label">Phone</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; Quentin Caniou</li>
+				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</footer>
+</div>
 
-	</body>
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+	// Enhanced clipboard function
+	function copyToClipboard(text, element) {
+		const tempEl = document.createElement('textarea');
+		tempEl.value = text;
+		document.body.appendChild(tempEl);
+		tempEl.select();
+
+		try {
+			document.execCommand('copy');
+			showCopyFeedback(element);
+		} catch (err) {
+			console.error('Copy failed:', err);
+		}
+
+		document.body.removeChild(tempEl);
+	}
+
+	function showCopyFeedback(element) {
+		const feedback = document.createElement('div');
+		feedback.className = 'copy-feedback';
+		feedback.textContent = 'Copied to clipboard';
+
+		const rect = element.getBoundingClientRect();
+		feedback.style.top = `${window.scrollY + rect.top - 30}px`;
+		feedback.style.left = `${rect.left}px`;
+
+		document.body.appendChild(feedback);
+
+		setTimeout(() => {
+			feedback.style.opacity = '0';
+			setTimeout(() => feedback.remove(), 300);
+		}, 1500);
+	}
+
+	document.querySelectorAll('.copyable').forEach(el => {
+		el.addEventListener('click', function(e) {
+			e.preventDefault();
+			const text = this.classList.contains('fa-envelope')
+					? 'quentin.caniou2002@gmail.com'
+					: '+33 6 64 90 94 52';
+			copyToClipboard(text, this);
+		});
+	});
+</script>
+<style>
+	.copy-feedback {
+		position: absolute;
+		background: rgba(0,0,0,0.8);
+		color: white;
+		padding: 5px 10px;
+		border-radius: 4px;
+		font-size: 14px;
+		z-index: 100;
+		opacity: 1;
+		transition: opacity 0.3s;
+		pointer-events: none;
+	}
+</style>
+</body>
 </html>

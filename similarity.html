@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Similarity - Quentin Caniou</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Portfolio</strong> <span>by Quentin Caniou</span></a>
+					</header>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Similarity Score</h1>
+									</header>
+									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+									<p>Since we were proposing more ecological alternative to a fast fashion article we needed to sort them by similarity in order to propose something relatively looking like the original article choseen by the user</p>
+									<p>So I worked on a similarity score AI</p>
+									<p>Basically it is an IA capable of detecting the type of article but also the color and some shape on it. <br/>
+									Using those prediction, i compute the cosine similarity and obtain a percentage of similarity</p>
+								</div>
+							</section>
+
+					</div>
+				<footer id="footer">
+					<div class="inner">
+						<ul class="icons">
+							<li><a href="https://github.com/QuentinCn" class="icon brands alt fa-github"><span
+									class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/quentin-caniou-64935a1ab/" class="icon brands alt fa-linkedin-in"><span
+									class="label">LinkedIn</span></a></li>
+							<li><a class="icon solid alt fa-envelope copyable"
+								   onclick="copyToClipboard('quentin.caniou2002@gmail.com', this)"><span class="label">Email</span></a>
+							</li>
+							<li><a class="icon solid alt fa-phone copyable" onclick="copyToClipboard('+33 6 64 90 94 52', this)"><span
+									class="label">Phone</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled</li>
+							<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+		<script>
+			function copyToClipboard(text, element, event) {
+				// Create message element if it doesn't exist
+				let message = document.querySelector('.cursor-message');
+				if (!message) {
+					message = document.createElement('div');
+					message.className = 'cursor-message';
+					document.body.appendChild(message);
+				}
+
+				// Position the message near the cursor
+				if (event) {
+					message.style.left = `${event.clientX}px`;
+					message.style.top = `${event.clientY}px`;
+				}
+
+				// Set message content
+				message.textContent = 'Copied!';
+				message.style.animation = 'none';
+				void message.offsetWidth; // Trigger reflow
+				message.style.animation = 'fadeOut 1.5s forwards';
+
+				// Copy logic
+				navigator.clipboard.writeText(text).then(() => {
+					if (element) element.classList.add('copied');
+				}).catch(err => {
+					console.error('Failed to copy: ', err);
+					message.textContent = 'Copy failed!';
+					// Fallback method
+					const textarea = document.createElement('textarea');
+					textarea.value = text;
+					document.body.appendChild(textarea);
+					textarea.select();
+					document.execCommand('copy');
+					document.body.removeChild(textarea);
+				});
+			}
+
+			document.querySelector('.fa-envelope').addEventListener('click', function(e) {
+				e.preventDefault();
+				copyToClipboard('quentin.caniou2002@gmail.com', this, e);
+			});
+
+			document.querySelector('.fa-phone').addEventListener('click', function(e) {
+				e.preventDefault();
+				copyToClipboard('+33 6 64 90 94 52', this, e);
+			});
+		</script>
+	</body>
+</html>
